@@ -11,10 +11,10 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int> atributyPostavy = new Dictionary<string, int>();
-            atributyPostavy.Add("STR", 10);
-            atributyPostavy.Add("DEX", 10);
-            atributyPostavy.Add("INT", 10);
+            Dictionary<string, int> atributyPostavy = new Dictionary<string, int>()
+            {
+                {"STR", 10 }, {"DEX", 10 }, {"INT", 10 }
+            };
 
             bool mrtvy = false;
             int level = 1;
@@ -29,7 +29,7 @@ namespace ConsoleApp3
                 Console.Clear();
                 Console.WriteLine($"Jsi unavený na {unava}%");
                 Console.WriteLine("Chces jít na quest nebo se jít vyspat? Q/V ");
-                string odpoved = Console.ReadLine().ToLower();
+                string odpoved = Console.ReadLine().ToLower().Trim();
                 string ukolTyp = typy[random.Next(0, 3)];
 
                 switch (odpoved)
@@ -39,12 +39,12 @@ namespace ConsoleApp3
                         Console.Clear();
                         Console.WriteLine($"Vydáváš se plnit úkol na {ukolTyp}, vrať se za {level * 10} sekund");
                         Console.WriteLine(".....");
-                        //Thread.Sleep(level * 10000);
+                        Thread.Sleep(level * 10000);
                         mrtvy = ((random.Next(0, 101) > unava) ? false : true);
                         if (mrtvy)
                         {
                             Console.Clear();
-                            Console.WriteLine("Usnul jsi v boji a zemřel");
+                            Console.WriteLine("Usnul jsi v boji a zemřel ty NOOB!!!!");
                             break;
                         }
                         level++;
