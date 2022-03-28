@@ -11,7 +11,7 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int> atributyPostavy = new Dictionary<string, int>()
+            Dictionary<string, int> atributyPostavy = new Dictionary<string, int>();
             atributyPostavy.Add("STR", 10);
             atributyPostavy.Add("DEX", 10);
             atributyPostavy.Add("INT", 10);
