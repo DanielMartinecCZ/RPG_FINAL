@@ -40,11 +40,11 @@ namespace ConsoleApp3
                         Console.WriteLine($"Vydáváš se plnit úkol na {ukolTyp}, vrať se za {level * 10} sekund");
                         Console.WriteLine(".....");
                         Thread.Sleep(level * 10000);
-                        mrtvy = ((random.Next(0, 101) > unava) ? false : true);
+                        mrtvy = ((random.Next(0, 101) > unava) ? false : true); 
                         if (mrtvy)
                         {
                             Console.Clear();
-                            Console.WriteLine("Usnul jsi v boji a zemřel ty NOOB!!!!");
+                            Console.WriteLine("Usnul jsi v boji a zemřel ty NOOB!!!");
                             break;
                         }
                         level++;
@@ -60,7 +60,7 @@ namespace ConsoleApp3
                         break;
                     case "v":
                         Console.Clear();
-                        Console.WriteLine($"{jmeno} bude spat jeste {unava} sekund, vrat se pak");
+                        Console.WriteLine($"{jmeno} bude spát ještě {unava} sekund, vrať se pak");
                         Thread.Sleep(unava * 1000);
                         Console.WriteLine($"{jmeno} uz je vzhuru");
                         unava = 0;
