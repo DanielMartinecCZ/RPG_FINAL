@@ -30,8 +30,7 @@ namespace ConsoleApp3
                 Console.WriteLine($"Jsi unavený na {unava}%");
                 Console.WriteLine("Chces jít na quest nebo se jít vyspat? Q/V ");
                 string odpoved = Console.ReadLine().ToLower();
-                int ran = random.Next(0, 3);
-                string ukolTyp = typy[ran];
+                string ukolTyp = typy[random.Next(0, 3)];
 
                 switch (odpoved)
                 {
@@ -40,7 +39,7 @@ namespace ConsoleApp3
                         Console.Clear();
                         Console.WriteLine($"Vydáváš se plnit úkol na {ukolTyp}, vrať se za {level * 10} sekund");
                         Console.WriteLine(".....");
-                        Thread.Sleep(level * 10000);
+                        //Thread.Sleep(level * 10000);
                         mrtvy = ((random.Next(0, 101) > unava) ? false : true);
                         if (mrtvy)
                         {
