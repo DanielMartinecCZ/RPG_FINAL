@@ -22,7 +22,7 @@ namespace ConsoleApp3
             Console.Write("Zadej jmeno své postavy: ");
             string jmeno = Console.ReadLine();
             Random random = new Random();
-            int ran;
+            string[] typy = new string[]{ "STR", "DEX", "INT" };
 
             do
             {
@@ -30,27 +30,13 @@ namespace ConsoleApp3
                 Console.WriteLine($"Jsi unavený na {unava}%");
                 Console.WriteLine("Chces jít na quest nebo se jít vyspat? Q/V ");
                 string odpoved = Console.ReadLine().ToLower();
-                string ukolTyp = "";
-                ran = random.Next(0, 3);
+                int ran = random.Next(0, 3);
+                string ukolTyp = typy[ran];
 
                 switch (odpoved)
                 {
                     case "q":
 
-                        switch (ran)
-                        {
-                            case 0:
-                                ukolTyp = "STR";
-                                break;
-
-                            case 1:
-                                ukolTyp = "DEX";
-                                break;
-
-                            case 2:
-                                ukolTyp = "INT";
-                                break;
-                        }
                         Console.Clear();
                         Console.WriteLine($"Vydáváš se plnit úkol na {ukolTyp}, vrať se za {level * 10} sekund");
                         Console.WriteLine(".....");
@@ -82,9 +68,7 @@ namespace ConsoleApp3
                         Console.WriteLine("Pro pokračování stiskni tlačítko na klávesnici");
                         Console.ReadKey();
                         break;
-
                 }
-
             } while (!mrtvy);
             Console.ReadKey();
         }
