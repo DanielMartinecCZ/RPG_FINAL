@@ -21,6 +21,18 @@ namespace ConsoleApp3
             int unava = 0;
             Console.Write("Zadej jmeno své postavy: ");
             string jmeno = Console.ReadLine();
+
+            if(jmeno.ToLower().Trim() == "amogus")
+            {
+                Console.Clear();
+                Console.WriteLine("  #####     SUS       ");
+                Console.WriteLine(" ##   #  ");
+                Console.WriteLine(" ######  ");
+                Console.WriteLine(" ### ##  ");
+                Console.WriteLine("  ## ##  ");
+                Thread.Sleep(5000);
+            }
+
             Random random = new Random();
             string[] typy = new string[]{ "STR", "DEX", "INT" };
 
